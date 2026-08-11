@@ -1,0 +1,30 @@
+scenario_id: ACM-S13
+priority: P0
+frameworks: [core]
+description: >
+  Ordre d'événements runtime invalide. La séquence contient une transition
+  completed -> running (interdite §7.2). Le moteur doit la détecter, produire
+  un code d'erreur explicite, ne rien corriger silencieusement, et signaler le
+  graphe reconstruit comme non fiable.
+
+# Pas de configuration ACI nécessaire : ce scénario porte sur la machine à
+# états runtime, pas sur la propagation. Le graphe reste vide.
+revisions: []
+relations: []
+evidence: []
+
+runtime_sequence:
+  - {event_type: "node.instantiated", event_id: "e1", sequence: 0}
+  - {event_type: "state.changed", to_state: "ready", event_id: "e2", sequence: 1}
+  - {event_type: "state.changed", to_state: "running", event_id: "e3", sequence: 2}
+  - {event_type: "tool.invoked", event_id: "e4", sequence: 3}
+  - {event_type: "tool.completed", event_id: "e5", sequence: 4}
+  - {event_type: "state.changed", to_state: "completed", event_id: "e6", sequence: 5}
+  # Anomalie : completed -> running interdit.
+  - {event_type: "state.changed", to_state: "running", event_id: "e7", sequence: 6}
+
+expected:
+  runtime_sequence:
+    valid: false
+    reliable: false
+    problem_codes: [ACM-TRANSITION-001]

@@ -1,0 +1,24 @@
+# Emplacement : scenarios/impact_experiment/oracle/oracle_crewai_intermediate.yaml
+# Oracle d'impact FIGÉ — inspection indépendante du code natif crewai.
+# Coûts d'inspection : voir inspection/crewai_intermediate.yaml.
+schema_version: "1"
+framework: crewai
+change_id: intermediate-research-tool
+change_class: intermediate
+root_aci: "aci:tool:web-search"
+root_revision_from: r1
+root_revision_to: r2
+description: >
+  Modification de l'outil de recherche (uses_tool) du Research Agent. Le
+  researcher devient stale, et le workflow remonte impacted via §14.1.
+affected:
+  - aci: "aci:agent:researcher"
+    rationale: >
+      uses_tool(aci:tool:web-search) : preuve snapshotant web-search@r1 ;
+      r1->r2 rend la preuve stale -> agent stale.
+  - aci: "aci:workflow:main"
+    rationale: >
+      contains(researcher) avec impact_dependency : §14.1 remonte l'impact vers
+      le workflow.
+established_by: "AB"
+established_before_run: true

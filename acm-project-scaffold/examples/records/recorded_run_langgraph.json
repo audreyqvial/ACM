@@ -1,0 +1,57 @@
+{
+  "instance_id": "rt:planner-demo-001",
+  "definition_ref": {
+    "id": "aci:template:planner",
+    "revision_id": "01JT1",
+    "digest": "sha256:2ff5d61231883d85a3914020c3d375f63392975982750e7af69f30dd08805589"
+  },
+  "resolved_config": {
+    "prompt_ref": {
+      "id": "aci:prompt:planner-system",
+      "revision_id": "01JR1",
+      "digest": "sha256:2dc44926271ef6c454b7a891a04d130aab7a6b31d660c13c3d44c5cba1ede7fd"
+    },
+    "model_ref": {
+      "id": "aci:model:gpt-5.4",
+      "revision_id": "01JM1",
+      "digest": "sha256:bd5937ddffe7761f0b2d14fa7e9b8266cd77b6e5680e5b0be0f1d48a72c26e65"
+    },
+    "tool_refs": [],
+    "prompt_overridden": false,
+    "system_instructions_overridden": false,
+    "model_identity_overridden": false,
+    "tool_set_overridden": false,
+    "permissions_overridden": false,
+    "delegation_policy_overridden": false,
+    "termination_rules_overridden": false,
+    "memory_source_overridden": false,
+    "retrieval_source_overridden": false,
+    "parameters_within_validated_ranges": true
+  },
+  "traceability": {
+    "factory_ref": {
+      "id": "aci:factory:agent-factory",
+      "revision_id": "01JF1",
+      "digest": "sha256:c5eeb360fb52e62145d60c485c946fb771ac900d3966cfa06315f0471f148f76"
+    },
+    "template_ref": {
+      "id": "aci:template:planner",
+      "revision_id": "01JT1",
+      "digest": "sha256:2ff5d61231883d85a3914020c3d375f63392975982750e7af69f30dd08805589"
+    },
+    "creation_event_id": "evt:demo:001",
+    "created_by_valid_factory": true
+  },
+  "permissions": {
+    "within_creator_ceiling": true,
+    "within_factory_ceiling": true,
+    "within_environment_ceiling": true,
+    "uses_authorized_tools_only": true
+  },
+  "terminal_state": "completed",
+  "resolved_config_digest": "sha256:cf3e03b8eee77f72ad18ba1d85d28626108aba3d58fa5d4c6f117ecfb7aff4b9",
+  "runtime_checks_completed": true,
+  "runtime_checks_passed": true,
+  "adapter_name": "langgraph",
+  "produced_at": "2026-07-27T17:27:14.736182Z"
+}

@@ -1,0 +1,69 @@
+# Emplacement : scenarios/fixtures/ACM-S02.yaml
+scenario_id: ACM-S02
+priority: P0
+frameworks: [core]
+description: >
+  Référence obligatoire manquante. A1 (planner) référence un modèle absent du
+  graphe (aci:model:missing). La configuration ne doit PAS être silencieusement
+  acceptée : la référence manquante est détectée au niveau structurel
+  (graph_problems). Voir la note ci-dessous sur la séparation validité
+  structurelle / éligibilité calculée.
+
+# NOTE NORMATIVE (correctif appliqué) :
+# La VALIDITÉ STRUCTURELLE de la configuration (propriété du graphe, exposée via
+# graph_problems) et l'ÉLIGIBILITÉ CALCULÉE d'un ACI (propriété de l'item)
+# restent deux concepts distincts, MAIS ils sont désormais RELIÉS lorsque
+# l'erreur structurelle est directement attribuable à un ACI : une dépendance
+# REQUISE pointant vers une révision absente rend la source non éligible
+# (blocked), avec la raison structurée ACM-REF-UNRESOLVED.
+# Le refus effectif de baseline est aussi vérifié en mode strict (voir
+# tests/test_scenario_s02.py).
+
+context:
+  eligibility_context: validation
+  environment: local
+  now: "2026-07-27T10:00:00Z"
+
+revisions:
+  - id: aci:agent:planner
+    revision_id: R1
+    aci_type: agent
+    lifecycle_state: validated
+    quality_state: ok
+    assurance_state: assessed
+    content_frozen: true
+    assurance_policy:
+      required_assurance_dimensions: [functional]
+      composition_mode: hybrid
+  # aci:model:missing est délibérément ABSENT du graphe.
+
+relations:
+  # A1 déclare une dépendance REQUISE vers un modèle qui n'existe pas.
+  - id: rel:a1:uses-model:missing
+    source: aci:agent:planner
+    target: aci:model:missing
+    relation_type: uses_model
+    required: true
+    propagation_policy: blocking
+
+evidence:
+  - id: evidence:eval:aci:agent:planner:001
+    target: aci:agent:planner
+    scope_environment: local
+    scope_dimensions: [functional]
+    result: pass
+    blocking: true
+
+expected:
+  # La référence manquante DOIT être détectée au niveau structurel.
+  graph_problems_contains:
+    - "Référence target manquante: aci:model:missing"
+  items:
+    aci:agent:planner:
+      # A1 existe (lifecycle intrinsèque préservé).
+      lifecycle_state: validated
+      # CORRECTIF S02 : la référence requise non résolue est désormais reliée
+      # à l'éligibilité de l'ACI directement attribuable → blocked, avec une
+      # raison structurée dédiée.
+      eligibility_state: blocked
+      reason_codes: [ACM-REF-UNRESOLVED]

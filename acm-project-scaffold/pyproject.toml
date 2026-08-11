@@ -1,0 +1,31 @@
+[project]
+name = "acm"
+version = "0.1.0"
+description = "Agentic Configuration Management — reference implementation (Lifecycle & State Propagation Model v0.1)"
+requires-python = ">=3.11,<3.14"
+dependencies = ["pydantic>=2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6"]
+langgraph = ["langgraph>=1", "langchain-core>=1"]
+crewai = ["crewai>=1"]
+openai = ["langchain-openai>=1"]
+evaluation = ["pytest>=8", "hypothesis>=6", "pyyaml>=6"]
+impact-experiment = ["pyyaml>=6"]
+# Tout installer d'un coup (les deux frameworks + exécution OpenAI) :
+all = [
+    "pytest>=8", "hypothesis>=6",
+    "langgraph>=1", "langchain-core>=1",
+    "crewai>=1",
+    "openai-agents>=0.14",
+    "langchain-openai>=1",
+    "pyyaml>=6",
+]
+
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["acm*"]

@@ -1,0 +1,39 @@
+# Fichiers d'environnement
+.env
+env/
+venv/
+
+# Fichiers texte
+*.txt
+
+# Archives
+*.zip
+
+# VS Code
+.vscode/
+
+# Cache Python
+__pycache__/
+
+# Distribution
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test 
+.pytest_cache/
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Jupyter Notebook
+.ipynb_checkpoints  
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Streamlit
+.streamlit/secrets.toml

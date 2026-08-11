@@ -1,0 +1,10 @@
+# Emplacement : scenarios/impact_experiment/inspection/langgraph_intermediate.yaml
+schema_version: "1"
+framework: crewai
+change_id: intermediate-research-tool
+manual_inspections: 13
+assisted_inspections: 4
+protocol_note: >
+  manual = inspection exhaustive des 13 ACI. assisted = vérification résiduelle
+  après ensemble affecté ACM.
+established_by: "AB"

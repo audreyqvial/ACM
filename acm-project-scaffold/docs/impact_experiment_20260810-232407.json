@@ -1,0 +1,470 @@
+[
+  {
+    "framework": "langgraph",
+    "change_id": "local-finalizer-prompt",
+    "change_class": "local",
+    "root_aci": "aci:prompt:finalize",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 2,
+    "inspection_reduction": 0.846154,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.2429,
+    "oracle_content_sha256": "sha256:b881df7f58fd675d5d8ae2d4c9bba18c57f16bc45a7b0b788fad72f2c2815291",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:finalizer",
+      "aci:prompt:finalize",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.234807+00:00"
+  },
+  {
+    "framework": "langgraph",
+    "change_id": "intermediate-research-tool",
+    "change_class": "intermediate",
+    "root_aci": "aci:tool:web-search",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 4,
+    "inspection_reduction": 0.692308,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.0728,
+    "oracle_content_sha256": "sha256:d3aace9c1f0c78559c52b194a0537b17447fa550be7c62c1de7a6a6f0607d6e4",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:researcher",
+      "aci:tool:web-search",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.248288+00:00"
+  },
+  {
+    "framework": "langgraph",
+    "change_id": "global-shared-model",
+    "change_class": "global",
+    "root_aci": "aci:model:shared-llm",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 5,
+    "impact_depth": 2,
+    "impact_ratio": 0.454545,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 5,
+    "inspection_reduction": 0.615385,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1319,
+    "oracle_content_sha256": "sha256:e67f3263f578f203866b326002ee1cc20159b1ef50942cb40548a72611f2d8f3",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:model:shared-llm",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.261135+00:00"
+  },
+  {
+    "framework": "crewai",
+    "change_id": "local-finalizer-prompt",
+    "change_class": "local",
+    "root_aci": "aci:prompt:finalize",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 2,
+    "inspection_reduction": 0.846154,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1459,
+    "oracle_content_sha256": "sha256:a6a60d07ef0d1698d754439f7e59888edc12bddd0cb0798dc61dcc34926c5c70",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:finalizer",
+      "aci:prompt:finalize",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.274205+00:00"
+  },
+  {
+    "framework": "crewai",
+    "change_id": "intermediate-research-tool",
+    "change_class": "intermediate",
+    "root_aci": "aci:tool:web-search",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 4,
+    "inspection_reduction": 0.692308,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1111,
+    "oracle_content_sha256": "sha256:6fc4309406740eb4df8ad3e4a1753297b7c0606d41e21213c748d568502d2bd6",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:researcher",
+      "aci:tool:web-search",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.287035+00:00"
+  },
+  {
+    "framework": "crewai",
+    "change_id": "global-shared-model",
+    "change_class": "global",
+    "root_aci": "aci:model:shared-llm",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 5,
+    "impact_depth": 2,
+    "impact_ratio": 0.454545,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 5,
+    "inspection_reduction": 0.615385,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1179,
+    "oracle_content_sha256": "sha256:f41da83a5d77680086179d4257586bfbda6f8a1adb7ad6484ef4b75a588b1557",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:model:shared-llm",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.299933+00:00"
+  },
+  {
+    "framework": "openai-agents",
+    "change_id": "local-finalizer-prompt",
+    "change_class": "local",
+    "root_aci": "aci:prompt:finalize",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:finalizer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 2,
+    "inspection_reduction": 0.846154,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1837,
+    "oracle_content_sha256": "sha256:2f6196ca4de971abbe650a71955309a78f5dbb45b8b687279a54ae8f0a1db996",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:finalizer",
+      "aci:prompt:finalize",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.313061+00:00"
+  },
+  {
+    "framework": "openai-agents",
+    "change_id": "intermediate-research-tool",
+    "change_class": "intermediate",
+    "root_aci": "aci:tool:web-search",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:researcher",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 2,
+    "impact_depth": 2,
+    "impact_ratio": 0.181818,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 4,
+    "inspection_reduction": 0.692308,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1361,
+    "oracle_content_sha256": "sha256:bcae3784064532f419e3adfcee99d1f2333fa2424c087fcb5feb251c0980ba69",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:researcher",
+      "aci:tool:web-search",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.325826+00:00"
+  },
+  {
+    "framework": "openai-agents",
+    "change_id": "global-shared-model",
+    "change_class": "global",
+    "root_aci": "aci:model:shared-llm",
+    "native_graph_size": 11,
+    "acm_graph_size": 11,
+    "relation_count": 13,
+    "oracle_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "predicted_affected": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "true_positive": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:workflow:main"
+    ],
+    "false_positive": [],
+    "false_negative": [],
+    "impact_size": 5,
+    "impact_depth": 2,
+    "impact_ratio": 0.454545,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manual_inspections": 13,
+    "assisted_inspections": 5,
+    "inspection_reduction": 0.615385,
+    "fixed_point_iterations": 3,
+    "elapsed_ms": 2.1487,
+    "oracle_content_sha256": "sha256:1d4830a5beaa44961d17de4847856ab0635deee2d45493f849718da28f64e2d8",
+    "digest_verified": true,
+    "oracle_git_commit": null,
+    "reach_inclusion_holds": true,
+    "reach_not_activated": [],
+    "baseline_reassessment_required": true,
+    "baseline_triggering_items": [
+      "aci:agent:direct",
+      "aci:agent:finalizer",
+      "aci:agent:researcher",
+      "aci:agent:reviewer",
+      "aci:model:shared-llm",
+      "aci:workflow:main"
+    ],
+    "deterministic": true,
+    "repetitions": 5,
+    "experiment_started_at": "2026-08-10T23:24:07.338586+00:00"
+  }
+]

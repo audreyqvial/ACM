@@ -1,0 +1,25 @@
+# Emplacement : scenarios/impact_experiment/oracle/oracle_langgraph_local.yaml
+# Oracle d'impact FIGÉ — inspection indépendante du code natif langgraph, AVANT
+# propagation ACM. Coûts d'inspection : voir inspection/langgraph_local.yaml.
+schema_version: "1"
+framework: langgraph
+change_id: local-finalizer-prompt
+change_class: local
+root_aci: "aci:prompt:finalize"
+root_revision_from: r1
+root_revision_to: r2
+description: >
+  Modification du prompt du Finalizer (uses_prompt). Le finalizer devient stale
+  (sa preuve snapshote finalize@r1), et le workflow qui le contient remonte
+  impacted via la propagation §14.1.
+affected:
+  - aci: "aci:agent:finalizer"
+    rationale: >
+      uses_prompt(aci:prompt:finalize) : preuve snapshotant finalize@r1 ;
+      r1->r2 rend la preuve stale -> agent stale.
+  - aci: "aci:workflow:main"
+    rationale: >
+      contains(finalizer) avec impact_dependency : §14.1 remonte l'impact du
+      composant obligatoire vers le workflow.
+established_by: "AB"
+established_before_run: true

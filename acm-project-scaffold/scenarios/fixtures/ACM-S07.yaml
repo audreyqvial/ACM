@@ -1,0 +1,62 @@
+# Emplacement : scenarios/fixtures/ACM-S07.yaml
+scenario_id: ACM-S07
+priority: P0
+frameworks: [core, langgraph, crewai]
+description: >
+  Nouvelle révision de prompt et invalidation des preuves. A1@R2 utilise P1@R2
+  (nouvelle révision, draft). Une preuve E1 couvrait A1@R1 avec snapshot P1@R1 ;
+  elle N'EST PAS applicable à A1@R2. A1@R2 hérite d'un état frais
+  (draft/unknown/unassessed/blocked) : pas de réutilisation implicite des
+  preuves. La partie « snapshot divergent → stale » (même révision d'agent) est
+  couverte par tests/test_scenario_s07.py et par test_p0_review (P0-2).
+
+context:
+  eligibility_context: validation
+  environment: local
+  now: "2026-07-27T10:00:00Z"
+
+revisions:
+  # Nouvelle révision R2 du prompt (draft).
+  - id: aci:prompt:planner-system
+    revision_id: "01JR2"
+    aci_type: prompt
+    lifecycle_state: draft
+    quality_state: unknown
+    assurance_state: unassessed
+    assurance_policy: {required_assurance_dimensions: [functional], composition_mode: hybrid}
+  # Nouvelle révision R2 de l'agent (draft), utilise P1@R2.
+  - id: aci:agent:planner
+    revision_id: "01JR2"
+    aci_type: agent
+    lifecycle_state: draft
+    quality_state: unknown
+    assurance_state: unassessed
+    assurance_policy: {required_assurance_dimensions: [functional], composition_mode: hybrid}
+
+relations:
+  - id: rel:a1r2:uses-prompt:p1r2
+    source: aci:agent:planner
+    target: aci:prompt:planner-system
+    relation_type: uses_prompt
+    required: true
+    propagation_policy: blocking
+
+evidence:
+  # Preuve ciblant A1@R1 (ancienne révision) : PAS applicable à A1@R2.
+  - id: evidence:eval:planner:R1
+    target: aci:agent:planner
+    target_revision_id: "01JR1"
+    target_digest: "sha256:aci:agent:planner-R1"
+    scope_dimensions: [functional]
+    result: pass
+    blocking: true
+
+expected:
+  items:
+    aci:agent:planner:
+      lifecycle_state: draft
+      effective_quality: unknown
+      effective_assurance: unassessed
+      eligibility_state: blocked
+      # L'ancienne preuve R1 n'est PAS applicable à R2 (aucune réutilisation).
+      applicable_evidence: []

@@ -1,0 +1,28 @@
+# Emplacement : scenarios/impact_experiment/oracle/oracle_crewai_global.yaml
+# Oracle d'impact FIGÉ — inspection indépendante du code natif crewai.
+# Coûts d'inspection : voir inspection/crewai_global.yaml.
+schema_version: "1"
+framework: crewai
+change_id: global-shared-model
+change_class: global
+root_aci: "aci:model:shared-llm"
+root_revision_from: r1
+root_revision_to: r2
+description: >
+  Remplacement du modèle partagé (uses_model) référencé par les 4 agents. Tous
+  les agents deviennent stale ; le workflow remonte impacted via §14.1.
+affected:
+  - aci: "aci:agent:researcher"
+    rationale: "uses_model(shared-llm) : preuve snapshotant shared-llm@r1 -> stale."
+  - aci: "aci:agent:reviewer"
+    rationale: "uses_model(shared-llm) : preuve snapshotant shared-llm@r1 -> stale."
+  - aci: "aci:agent:finalizer"
+    rationale: "uses_model(shared-llm) : preuve snapshotant shared-llm@r1 -> stale."
+  - aci: "aci:agent:direct"
+    rationale: "uses_model(shared-llm) : preuve snapshotant shared-llm@r1 -> stale."
+  - aci: "aci:workflow:main"
+    rationale: >
+      contains(researcher, reviewer, finalizer, direct) avec impact_dependency :
+      §14.1 remonte l'impact des composants obligatoires vers le workflow.
+established_by: "AB"
+established_before_run: true

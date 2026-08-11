@@ -1,0 +1,10 @@
+# Emplacement : scenarios/impact_experiment/inspection/langgraph_global.yaml
+schema_version: "1"
+framework: langgraph
+change_id: global-shared-model
+manual_inspections: 13
+assisted_inspections: 5
+protocol_note: >
+  manual = inspection exhaustive des 13 ACI. assisted = vérification résiduelle
+  après ensemble affecté ACM.
+established_by: "AB"

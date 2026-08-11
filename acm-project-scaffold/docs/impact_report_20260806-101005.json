@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-08-06T10:10:05.682398+02:00",
+  "root_id": "aci:model:shared-llm",
+  "graph_size": 13,
+  "relation_count": 18,
+  "manual": {
+    "affected_count": 9,
+    "naive_affected_count": 6,
+    "missed_by_naive_count": 3,
+    "missed_by_naive": [
+      "aci:workflow:w0",
+      "aci:workflow:w1",
+      "aci:workflow:w2"
+    ],
+    "inspection_steps": 10,
+    "max_depth": 2
+  },
+  "acm": {
+    "affected_count": 9,
+    "queries": 1,
+    "iterations": 3
+  },
+  "agreement": {
+    "exhaustive_manual_matches_acm": true,
+    "only_in_manual": [],
+    "only_in_acm": []
+  },
+  "notes": [
+    "L'investigation naïve (1 niveau) manque 3 item(s) réellement affecté(s) : ['aci:workflow:w0', 'aci:workflow:w1', 'aci:workflow:w2'].",
+    "L'investigation manuelle EXHAUSTIVE et ACM concordent sur l'ensemble affecté ; ACM l'obtient en une propagation contre 10 inspections manuelles."
+  ]
+}

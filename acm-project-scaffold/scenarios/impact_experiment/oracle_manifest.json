@@ -1,0 +1,78 @@
+{
+  "schema_version": "1",
+  "generated_at": "2026-08-10T23:23:56.586043+00:00",
+  "entries": {
+    "crewai::global-shared-model": {
+      "oracle_key": "crewai::global-shared-model",
+      "relative_path": "oracle_crewai_global.yaml",
+      "content_digest": "sha256:f41da83a5d77680086179d4257586bfbda6f8a1adb7ad6484ef4b75a588b1557",
+      "file_digest": "sha256:bfaa51a28d071613c85d75e4d29f6791652f172ddde1ebd0860388096ac8c0f1",
+      "created_at": null,
+      "git_commit": null
+    },
+    "crewai::intermediate-research-tool": {
+      "oracle_key": "crewai::intermediate-research-tool",
+      "relative_path": "oracle_crewai_intermediate.yaml",
+      "content_digest": "sha256:6fc4309406740eb4df8ad3e4a1753297b7c0606d41e21213c748d568502d2bd6",
+      "file_digest": "sha256:8f3478eb9f823aa3578c48c1609dd2e6b51cdd1d75a18c41f5efa43b247e1966",
+      "created_at": null,
+      "git_commit": null
+    },
+    "crewai::local-finalizer-prompt": {
+      "oracle_key": "crewai::local-finalizer-prompt",
+      "relative_path": "oracle_crewai_local.yaml",
+      "content_digest": "sha256:a6a60d07ef0d1698d754439f7e59888edc12bddd0cb0798dc61dcc34926c5c70",
+      "file_digest": "sha256:d5a10c4828567463f7128ae65307e67945b78f7409268564cafad2454a96ce01",
+      "created_at": null,
+      "git_commit": null
+    },
+    "langgraph::global-shared-model": {
+      "oracle_key": "langgraph::global-shared-model",
+      "relative_path": "oracle_langgraph_global.yaml",
+      "content_digest": "sha256:e67f3263f578f203866b326002ee1cc20159b1ef50942cb40548a72611f2d8f3",
+      "file_digest": "sha256:333cb315bd478c44b9e115032d8da3c843582d33fb10eb1331dc84303086d0ef",
+      "created_at": null,
+      "git_commit": null
+    },
+    "langgraph::intermediate-research-tool": {
+      "oracle_key": "langgraph::intermediate-research-tool",
+      "relative_path": "oracle_langgraph_intermediate.yaml",
+      "content_digest": "sha256:d3aace9c1f0c78559c52b194a0537b17447fa550be7c62c1de7a6a6f0607d6e4",
+      "file_digest": "sha256:85ad2471851d84241a3455f67a7aa220f908ee735122b6db98da56613b1c8805",
+      "created_at": null,
+      "git_commit": null
+    },
+    "langgraph::local-finalizer-prompt": {
+      "oracle_key": "langgraph::local-finalizer-prompt",
+      "relative_path": "oracle_langgraph_local.yaml",
+      "content_digest": "sha256:b881df7f58fd675d5d8ae2d4c9bba18c57f16bc45a7b0b788fad72f2c2815291",
+      "file_digest": "sha256:67951f112e016349b753c415aefc0f2b0834b0145659ac02b89bb0d90b98ed86",
+      "created_at": null,
+      "git_commit": null
+    },
+    "openai-agents::global-shared-model": {
+      "oracle_key": "openai-agents::global-shared-model",
+      "relative_path": "oracle_openai-agents_global.yaml",
+      "content_digest": "sha256:1d4830a5beaa44961d17de4847856ab0635deee2d45493f849718da28f64e2d8",
+      "file_digest": "sha256:8d2c6fc69dbbeb4f068b50345df6f69e8a073ae906bde5e67c3257f4e718562c",
+      "created_at": null,
+      "git_commit": null
+    },
+    "openai-agents::intermediate-research-tool": {
+      "oracle_key": "openai-agents::intermediate-research-tool",
+      "relative_path": "oracle_openai-agents_intermediate.yaml",
+      "content_digest": "sha256:bcae3784064532f419e3adfcee99d1f2333fa2424c087fcb5feb251c0980ba69",
+      "file_digest": "sha256:bc07b80d32635bb9657d67660dcfa671197e82948407b1d11d2cc7eae7d5371c",
+      "created_at": null,
+      "git_commit": null
+    },
+    "openai-agents::local-finalizer-prompt": {
+      "oracle_key": "openai-agents::local-finalizer-prompt",
+      "relative_path": "oracle_openai-agents_local.yaml",
+      "content_digest": "sha256:2f6196ca4de971abbe650a71955309a78f5dbb45b8b687279a54ae8f0a1db996",
+      "file_digest": "sha256:267a2ea1c3c8c956733377186deead641ad02484673d043f36a5dfabbf2e6dfd",
+      "created_at": null,
+      "git_commit": null
+    }
+  }
+}

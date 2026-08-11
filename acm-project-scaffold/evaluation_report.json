@@ -1,0 +1,1057 @@
+{
+  "generated_at": "2026-08-06T08:01:45.216936+00:00",
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "by_priority": {
+      "P0": {
+        "pass": 10,
+        "fail": 0
+      },
+      "P1": {
+        "pass": 1,
+        "fail": 0
+      }
+    },
+    "invariants_checked": [
+      "I1",
+      "I10",
+      "I11",
+      "I12",
+      "I13",
+      "I14",
+      "I2",
+      "I3",
+      "I4",
+      "I5",
+      "I6",
+      "I7",
+      "I8",
+      "I9"
+    ],
+    "invariants_violated_detected": [
+      "I5"
+    ]
+  },
+  "results": [
+    {
+      "scenario_id": "ACM-S01",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:3ef7951c279e74ecb3e706c32a7ce92ffd26ede3234700367890cba5b0cdc43a",
+      "evidence_digest": "sha256:3918a40d713cde12fbc05edbcb0458cbc04aadd40ecda6f938a42cd93df3ce28",
+      "expected_status": {
+        "converged": true,
+        "valid": true,
+        "items": {
+          "aci:workflow:report-pipeline": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated"
+          },
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "eligibility_state": "eligible"
+          },
+          "aci:agent:writer": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "eligibility_state": "eligible"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": true,
+        "iterations": 3,
+        "summary": {
+          "eligible": 7,
+          "warning": 0,
+          "blocked": 0,
+          "current": 7,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:prompt:planner-system": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:prompt:planner-system:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:tool:web-search:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:prompt:writer-system": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:prompt:writer-system:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:tool:web-search:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:tool:web-search": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:tool:web-search:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:model:default-llm": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:model:default-llm:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:tool:web-search:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:agent:planner:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:tool:web-search:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:agent:writer": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:agent:writer:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:tool:web-search:001",
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ]
+          },
+          "aci:workflow:report-pipeline": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:aci:workflow:report-pipeline:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:aci:agent:planner:001",
+              "evidence:eval:aci:agent:writer:001",
+              "evidence:eval:aci:model:default-llm:001",
+              "evidence:eval:aci:prompt:planner-system:001",
+              "evidence:eval:aci:prompt:writer-system:001",
+              "evidence:eval:aci:tool:web-search:001"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 3,
+      "converged": true,
+      "execution_time_ms": 0.7,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S02",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:cf727a4d76fb5fdc270dea9a896653af144a15d9a38193c0c027d205f73fcd9b",
+      "evidence_digest": "sha256:6d4f251a8c4acc1cd0c1a67c8f3ba68524d46b60a06fe3e6456a74b181b218fa",
+      "expected_status": {
+        "graph_problems_contains": [
+          "Référence target manquante: aci:model:missing"
+        ],
+        "items": {
+          "aci:agent:planner": {
+            "lifecycle_state": "validated",
+            "eligibility_state": "blocked",
+            "reason_codes": [
+              "ACM-REF-UNRESOLVED"
+            ]
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 1,
+          "current": 1,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [
+          "Référence target manquante: aci:model:missing@logical (relation rel:a1:uses-model:missing)"
+        ],
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-REF-UNRESOLVED"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:aci:agent:planner:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": []
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.12,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S03",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:7c13c8b64bbdec132b4f3ea6ebd112ba18b335d84b0007aac28aedc00ee4d674",
+      "evidence_digest": "sha256:8c897f3f50e894ff2935b14436e9d15f694edc910be5810e9acce7b4d2f4b903",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "inapplicable_evidence": [
+              "evidence:eval:planner:001"
+            ],
+            "applicable_evidence": [],
+            "effective_assurance": "unassessed",
+            "eligibility_state": "blocked"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 1,
+          "current": 1,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "unassessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-UNASSESSED"
+            ],
+            "applicable_evidence": [],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:001"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.095,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S05",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:9e2a30fe33a37474eb19c9898c152ad0926e8fcca4ab26f4a59d01f77ef156f7",
+      "evidence_digest": "sha256:47ef00580cc02c49829a0c7c387c2f1ed41717457ffa9353477ea928e9a3d3f4",
+      "expected_status": {
+        "items": {
+          "aci:tool:web-search": {
+            "effective_quality": "nok",
+            "eligibility_state": "blocked"
+          },
+          "aci:agent:planner": {
+            "declared_quality": "ok",
+            "effective_quality": "nok",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated"
+          },
+          "aci:workflow:report-pipeline": {
+            "declared_quality": "ok",
+            "effective_quality": "nok",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 3,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 3,
+          "current": 3,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:tool:web-search": {
+            "effective_quality": "nok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-QUALITY-NOK"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:tool:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:001",
+              "evidence:eval:workflow:001"
+            ]
+          },
+          "aci:agent:planner": {
+            "effective_quality": "nok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-QUALITY-NOK",
+              "ACM-PROP-001"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:planner:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:tool:001",
+              "evidence:eval:workflow:001"
+            ]
+          },
+          "aci:workflow:report-pipeline": {
+            "effective_quality": "nok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-QUALITY-NOK",
+              "ACM-PROP-001"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:workflow:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:001",
+              "evidence:eval:tool:001"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [
+        "I5"
+      ],
+      "runtime_event_count": 0,
+      "propagation_iterations": 3,
+      "converged": true,
+      "execution_time_ms": 0.237,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S06",
+      "framework": "core",
+      "priority": "P1",
+      "configuration_digest": "sha256:30c87e01995ffd7c2f7bff04ffa56a2c8cbc9f8ce96da89d20ce07a302f4f705",
+      "evidence_digest": "sha256:4e7628b31d99e0f708a9dd212fcbc59e48064c63ddfb481b210a609d7ec82f5f",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "eligibility_state": "warning",
+            "reason_codes": [
+              "ACM-PROP-WARN"
+            ]
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 3,
+        "summary": {
+          "eligible": 0,
+          "warning": 1,
+          "blocked": 1,
+          "current": 2,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:tool:web-search": {
+            "effective_quality": "nok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-QUALITY-NOK"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:tool:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:001"
+            ]
+          },
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "warning",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-PROP-WARN"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:planner:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:tool:001"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [
+        "I5"
+      ],
+      "runtime_event_count": 0,
+      "propagation_iterations": 3,
+      "converged": true,
+      "execution_time_ms": 0.166,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S07",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:b022930d5b1bdf38c7568cb9c0017df265afc9dff8c10bb15e4bcd83b034e14a",
+      "evidence_digest": "sha256:23ca09e034f58217c013f28f5f3130222da8ba5e3967a990add6ef795d7ab271",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "lifecycle_state": "draft",
+            "effective_quality": "unknown",
+            "effective_assurance": "unassessed",
+            "eligibility_state": "blocked",
+            "applicable_evidence": []
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 2,
+          "current": 2,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:prompt:planner-system": {
+            "effective_quality": "unknown",
+            "effective_assurance": "unassessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "draft",
+            "reason_codes": [
+              "ACM-ELIG-VAL-UNASSESSED"
+            ],
+            "applicable_evidence": [],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:R1"
+            ]
+          },
+          "aci:agent:planner": {
+            "effective_quality": "unknown",
+            "effective_assurance": "unassessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "draft",
+            "reason_codes": [
+              "ACM-ELIG-VAL-UNASSESSED",
+              "ACM-PROP-001"
+            ],
+            "applicable_evidence": [],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:planner:R1"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.136,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S08",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:9ffaea10a41d90058e8103b8fe6fc2c46f34ae15e70dff36006789de3f58a675",
+      "evidence_digest": "sha256:f674d53d3d8476fc183296fd0326c0d3a4020cdd5b9806d2e15233ae47ef1b95",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "effective_assurance": "assessed",
+            "applicable_evidence": [
+              "evidence:eval:planner:functional",
+              "evidence:eval:planner:robustness",
+              "evidence:eval:planner:security"
+            ]
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": true,
+        "iterations": 2,
+        "summary": {
+          "eligible": 1,
+          "warning": 0,
+          "blocked": 0,
+          "current": 1,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "eligible",
+            "lifecycle_state": "validated",
+            "reason_codes": [],
+            "applicable_evidence": [
+              "evidence:eval:planner:functional",
+              "evidence:eval:planner:robustness",
+              "evidence:eval:planner:security"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": []
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.098,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S09",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:bd262e23b78b449564bba8eec82041c63093849a0a746a27c151bd2d11c521d1",
+      "evidence_digest": "sha256:6b9a3b63f3bd9e40a22cb75bd9906ad158df7dbd18d36d37001ea6f2a94b6c01",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "effective_assurance": "assessed",
+            "effective_quality": "nok",
+            "eligibility_state": "blocked"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 1,
+          "current": 1,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "nok",
+            "effective_assurance": "assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-QUALITY-NOK"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:planner:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": []
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.085,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S10",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:64a6702a0e4132e2efe5d8304001979091385188d964b5ce183fde15ff11ca2f",
+      "evidence_digest": "sha256:ed92ce996f27814186daa9d9d3c0df558a44b2a13ed4390368565476c17e34e5",
+      "expected_status": {
+        "items": {
+          "aci:workflow:report-pipeline": {
+            "effective_assurance": "partially_assessed"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 2,
+          "current": 2,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:workflow:report-pipeline": {
+            "effective_quality": "unknown",
+            "effective_assurance": "partially_assessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-PROP-001"
+            ],
+            "applicable_evidence": [
+              "evidence:eval:workflow:001"
+            ],
+            "stale_evidence": [],
+            "inapplicable_evidence": []
+          },
+          "aci:agent:planner": {
+            "effective_quality": "unknown",
+            "effective_assurance": "unassessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "draft",
+            "reason_codes": [
+              "ACM-ELIG-VAL-UNASSESSED"
+            ],
+            "applicable_evidence": [],
+            "stale_evidence": [],
+            "inapplicable_evidence": [
+              "evidence:eval:workflow:001"
+            ]
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.138,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S11",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:4517884b1148ebf6afe6cd7fdd1d69d56c22785d1fe1658796a37609402bbfd1",
+      "evidence_digest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_status": {
+        "items": {
+          "aci:agent:planner": {
+            "effective_assurance": "unassessed"
+          }
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": false,
+        "iterations": 2,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 1,
+          "current": 1,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {
+          "aci:agent:planner": {
+            "effective_quality": "ok",
+            "effective_assurance": "unassessed",
+            "impact_state": "current",
+            "eligibility_state": "blocked",
+            "lifecycle_state": "validated",
+            "reason_codes": [
+              "ACM-ELIG-VAL-UNASSESSED"
+            ],
+            "applicable_evidence": [],
+            "stale_evidence": [],
+            "inapplicable_evidence": []
+          }
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 0,
+      "propagation_iterations": 2,
+      "converged": true,
+      "execution_time_ms": 0.087,
+      "result": "pass",
+      "mismatches": []
+    },
+    {
+      "scenario_id": "ACM-S13",
+      "framework": "core",
+      "priority": "P0",
+      "configuration_digest": "sha256:18d492ee6bb23c3963cb7137ba04abd82ab2e9b25200bcfb5385b8f0b792a3e2",
+      "evidence_digest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_status": {
+        "runtime_sequence": {
+          "valid": false,
+          "reliable": false,
+          "problem_codes": [
+            "ACM-TRANSITION-001"
+          ]
+        }
+      },
+      "observed_status": {
+        "converged": true,
+        "valid": true,
+        "iterations": 1,
+        "summary": {
+          "eligible": 0,
+          "warning": 0,
+          "blocked": 0,
+          "current": 0,
+          "impacted": 0,
+          "stale": 0
+        },
+        "graph_problems": [],
+        "items": {},
+        "runtime_sequence": {
+          "valid": false,
+          "reliable": false,
+          "final_state": "completed",
+          "problem_codes": [
+            "ACM-TRANSITION-001"
+          ]
+        }
+      },
+      "invariants_checked": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "I9",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "invariants_violated": [],
+      "runtime_event_count": 7,
+      "propagation_iterations": 1,
+      "converged": true,
+      "execution_time_ms": 0.048,
+      "result": "pass",
+      "mismatches": []
+    }
+  ]
+}
